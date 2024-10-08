@@ -1,0 +1,47 @@
+{
+  "app": {
+    "header": {
+      "title": "Mi Aplicación",
+      "subtitle": "Bienvenido a Mi Aplicación"
+    },
+    "footer": {
+      "rights": "Todos los derechos reservados",
+      "contact": "Contáctanos"
+    },
+    "nav": {
+      "home": "Inicio",
+      "about": "Sobre Nosotros",
+      "services": "Nuestros Servicios",
+      "contact": "Contacto"
+    },
+    "buttons": {
+      "submit": "Enviar",
+      "cancel": "Cancelar",
+      "login": "Iniciar sesión",
+      "logout": "Cerrar sesión"
+    },
+    "form": {
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Ingresa tu nombre"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "Ingresa tu correo electrónico"
+      },
+      "password": {
+        "label": "Contraseña",
+        "placeholder": "Ingresa tu contraseña"
+      }
+    },
+    "errors": {
+      "required": "Este campo es obligatorio",
+      "invalid_email": "Dirección de correo electrónico no válida",
+      "short_password": "La contraseña debe tener al menos 8 caracteres"
+    },
+    "notifications": {
+      "success": "Operación completada con éxito",
+      "failure": "La operación falló. Por favor, inténtelo de nuevo."
+    }
+  }
+}

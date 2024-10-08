@@ -1,0 +1,47 @@
+{
+  "app": {
+    "header": {
+      "title": "我的应用程序",
+      "subtitle": "欢迎使用我的应用"
+    },
+    "footer": {
+      "rights": "版权所有",
+      "contact": "联系我们"
+    },
+    "nav": {
+      "home": "首页",
+      "about": "关于我们",
+      "services": "我们的服务",
+      "contact": "联系"
+    },
+    "buttons": {
+      "submit": "提交",
+      "cancel": "取消",
+      "login": "登录",
+      "logout": "登出"
+    },
+    "form": {
+      "name": {
+        "label": "姓名",
+        "placeholder": "输入您的姓名"
+      },
+      "email": {
+        "label": "电子邮件",
+        "placeholder": "输入您的电子邮件"
+      },
+      "password": {
+        "label": "密码",
+        "placeholder": "输入您的密码"
+      }
+    },
+    "errors": {
+      "required": "此字段为必填项",
+      "invalid_email": "无效的电子邮件地址",
+      "short_password": "密码至少需要8个字符"
+    },
+    "notifications": {
+      "success": "操作成功完成",
+      "failure": "操作失败。请再试一次。"
+    }
+  }
+}

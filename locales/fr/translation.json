@@ -1,0 +1,47 @@
+{
+  "app": {
+    "header": {
+      "title": "Mon Application",
+      "subtitle": "Bienvenue sur Mon Application"
+    },
+    "footer": {
+      "rights": "Tous droits réservés",
+      "contact": "Contactez-nous"
+    },
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos de nous",
+      "services": "Nos Services",
+      "contact": "Contact"
+    },
+    "buttons": {
+      "submit": "Envoyer",
+      "cancel": "Annuler",
+      "login": "Se connecter",
+      "logout": "Se déconnecter"
+    },
+    "form": {
+      "name": {
+        "label": "Nom",
+        "placeholder": "Entrez votre nom"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Entrez votre email"
+      },
+      "password": {
+        "label": "Mot de passe",
+        "placeholder": "Entrez votre mot de passe"
+      }
+    },
+    "errors": {
+      "required": "Ce champ est requis",
+      "invalid_email": "Adresse email invalide",
+      "short_password": "Le mot de passe doit comporter au moins 8 caractères"
+    },
+    "notifications": {
+      "success": "Opération réussie",
+      "failure": "Échec de l'opération. Veuillez réessayer."
+    }
+  }
+}

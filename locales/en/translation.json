@@ -1,0 +1,47 @@
+{
+  "app": {
+    "header": {
+      "title": "My Application",
+      "subtitle": "Welcome to My App"
+    },
+    "footer": {
+      "rights": "All rights reserved",
+      "contact": "Contact Us"
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Our Services",
+      "contact": "Contact"
+    },
+    "buttons": {
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "login": "Login",
+      "logout": "Logout"
+    },
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter your password"
+      }
+    },
+    "errors": {
+      "required": "This field is required",
+      "invalid_email": "Invalid email address",
+      "short_password": "Password must be at least 8 characters"
+    },
+    "notifications": {
+      "success": "Operation completed successfully",
+      "failure": "Operation failed. Please try again."
+    }
+  }
+}
