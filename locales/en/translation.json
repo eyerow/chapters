@@ -42,6 +42,16 @@
     "notifications": {
       "success": "Operation completed successfully",
       "failure": "Operation failed. Please try again."
-    }
+    },
+    "faqs": [
+      {
+        "header": "How can I reset my password?",
+        "body": "To reset your password, click on 'Forgot Password' on the login page."
+      },
+      {
+        "header": "How do I contact customer support?",
+        "body": "You can contact customer support via the 'Contact Us' page or send an email to support@example.com."
+      }
+    ]
   }
 }

@@ -42,6 +42,16 @@
     "notifications": {
       "success": "Vorgang erfolgreich abgeschlossen",
       "failure": "Vorgang fehlgeschlagen. Bitte versuchen Sie es erneut."
-    }
+    },
+    "faqs": [
+      {
+        "header": "Wie kann ich mein Passwort zurücksetzen?",
+        "body": "Um Ihr Passwort zurückzusetzen, klicken Sie auf 'Passwort vergessen' auf der Anmeldeseite."
+      },
+      {
+        "header": "Wie kontaktiere ich den Kundensupport?",
+        "body": "Sie können den Kundensupport über die Seite 'Kontakt' kontaktieren oder eine E-Mail an support@example.com senden."
+      }
+    ]
   }
 }

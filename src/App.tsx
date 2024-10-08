@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "./useTranslations";
 import Fuse from "fuse.js";
 import "./App.css";
+import { unflattenJSON } from "./utils";
 
 interface Translation {
   key: string;
@@ -11,6 +12,50 @@ interface Translation {
 interface TranslationWithStatus extends Translation {
   status: string;
 }
+
+const renderTranslation = (translation: any, key: string): React.ReactNode => {
+  if (!translation) return null;
+
+  const keys = key
+    .replace(/\[(\w+)\]/g, ".$1")
+    .split(".")
+    .filter(Boolean);
+
+  let value = translation;
+  for (const k of keys) {
+    if (value && k in value) {
+      value = value[k];
+    } else {
+      return null;
+    }
+  }
+
+  if (typeof value === "string" || typeof value === "number") {
+    return <span>{value}</span>;
+  } else if (Array.isArray(value)) {
+    return (
+      <ul>
+        {value.map((item, index) => (
+          <li key={index}>{renderTranslation(item, key)}</li>
+        ))}
+      </ul>
+    );
+  } else if (typeof value === "object") {
+    return (
+      <div>
+        {Object.entries(value).map(([childKey, childValue]) => (
+          <div key={childKey}>
+            <strong>{childKey}:</strong>{" "}
+            {renderTranslation(childValue, childKey)}
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  return null;
+};
+
 const App: React.FC = () => {
   const {
     allTranslations,
@@ -189,31 +234,42 @@ const App: React.FC = () => {
           {results.length === 0 && <p>No results found.</p>}
           {results.length > 0 && (
             <div className="translations-container">
-              {results.map((translation) => (
-                <div key={translation.key} className="translation-key">
-                  <h3>{translation.key}</h3>
-                  <div className="cards-container">
-                    {allTranslations.map((input) => (
-                      <div className="translation-card" key={input.id}>
-                        <div
-                          className={`badge ${translation.status}`}
-                          title={`Status: ${
-                            translation.status.charAt(0).toUpperCase() +
-                            translation.status.slice(1)
-                          }`}
-                        >
-                          {input.name}
+              {results.map((translation) => {
+                // Unflatten each translation to reconstruct the nested structure
+                const nestedTranslations: Record<string, any> = {};
+                for (const language of Object.keys(flattenedData)) {
+                  nestedTranslations[language] = unflattenJSON({
+                    [translation.key]: translation[language],
+                  });
+                }
+
+                return (
+                  <div key={translation.key} className="translation-key">
+                    <h3>{translation.key}</h3>
+                    <div className="cards-container">
+                      {allTranslations.map((input) => (
+                        <div className="translation-card" key={input.id}>
+                          <div
+                            className={`badge ${translation.status}`}
+                            title={`Status: ${
+                              translation.status.charAt(0).toUpperCase() +
+                              translation.status.slice(1)
+                            }`}
+                          >
+                            {input.name}
+                          </div>
+                          <div className="translation-text">
+                            {renderTranslation(
+                              nestedTranslations[input.name],
+                              translation.key
+                            ) || <span className="missing-text">Missing</span>}
+                          </div>
                         </div>
-                        <div className="translation-text">
-                          {translation[input.name] || (
-                            <span className="missing-text">Missing</span>
-                          )}
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </div>

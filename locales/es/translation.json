@@ -42,6 +42,16 @@
     "notifications": {
       "success": "Operación completada con éxito",
       "failure": "La operación falló. Por favor, inténtelo de nuevo."
-    }
+    },
+    "faqs": [
+      {
+        "header": "¿Cómo puedo restablecer mi contraseña?",
+        "body": "Para restablecer tu contraseña, haz clic en 'Olvidé mi contraseña' en la página de inicio de sesión."
+      },
+      {
+        "header": "¿Cómo puedo contactar con el soporte al cliente?",
+        "body": "Puedes contactar con el soporte al cliente a través de la página 'Contáctanos' o enviar un correo electrónico a soporte@example.com."
+      }
+    ]
   }
 }

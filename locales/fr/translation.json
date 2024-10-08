@@ -42,6 +42,16 @@
     "notifications": {
       "success": "Opération réussie",
       "failure": "Échec de l'opération. Veuillez réessayer."
-    }
+    },
+    "faqs": [
+      {
+        "header": "Comment puis-je réinitialiser mon mot de passe ?",
+        "body": "Pour réinitialiser votre mot de passe, cliquez sur 'Mot de passe oublié' sur la page de connexion."
+      },
+      {
+        "header": "Comment contacter le support client ?",
+        "body": "Vous pouvez contacter le support client via la page 'Contactez-nous' ou envoyer un e-mail à support@example.com."
+      }
+    ]
   }
 }
